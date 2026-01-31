@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Tecno Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="marketplace-page">
+
+    <header class="ml-header">
+        <div class="ml-header-top">
+            <div class="logo">
+                <a href="index.html"><h2>TECNO<span class="text-accent">SERVICES</span></h2></a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar productos, marcas y más..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="ml-nav-promo">
+                <p><i class="fas fa-truck"></i> Envíos gratis en compras mayores a $100</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="ml-container">
+        <aside class="ml-sidebar">
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#" class="active">Laptops (13)</a></li>
+                <li><a href="#">Servidores (6)</a></li>
+                <li><a href="#">Monitores (9)</a></li>
+                <li><a href="#">Accesorios (27)</a></li>
+            </ul>
+
+            <h3>Condición</h3>
+            <ul>
+                <li><a href="#">Nuevo</a></li>
+                <li><a href="#">Reacondicionado</a></li>
+            </ul>
+
+            <h3>Precio</h3>
+            <ul>
+                <li><a href="#">Hasta $500</a></li>
+                <li><a href="#">$500 a $1.500</a></li>
+                <li><a href="#">Más de $1.500</a></li>
+            </ul>
+        </aside>
+
+        <section class="ml-products">
+            <div class="ml-results-info">
+                <p id="results-text">9 resultados para <strong>"Tecnología Pro"</strong></p>
+                <div class="ml-sort">
+                    Ordenar por: <strong>Relevancia</strong> <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="ml-grid">
+                <!-- Producto 1 -->
+                <div class="ml-card">
+                    <a href="product-detail.html?id=laptop-pro" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400" alt="Laptop">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <span class="ml-tag">MÁS VENDIDO</span>
+                        <a href="product-detail.html?id=laptop-pro"><h3>Laptop Workstation Pro - 32GB RAM</h3></a>
+                        <p class="ml-price">$ 1.250</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Laptop Workstation Pro">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="ml-card">
+                    <a href="product-detail.html?id=server-x1" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=400" alt="Servidor">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html?id=server-x1"><h3>Servidor Enterprise X1 - Intel Xeon</h3></a>
+                        <p class="ml-price">$ 3.400</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Servidor Enterprise X1">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Banner Publicitario de Servicio Técnico -->
+                <div class="ml-banner">
+                    <div class="ml-banner-text">
+                        <h4><i class="fas fa-tools"></i> Soporte Técnico Especializado</h4>
+                        <p>¿Tu equipo necesita mantenimiento o reparación? Nuestros expertos certificados están listos para ayudarte con garantía total.</p>
+                    </div>
+                    <a href="#" class="btn btn-primary" id="banner-whatsapp">Contactar Técnico</a>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="ml-card">
+                    <a href="product-detail.html?id=monitor-4k" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400" alt="Monitor">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html?id=monitor-4k"><h3>Monitor UltraWide 4K - 34" Curvo</h3></a>
+                        <p class="ml-price">$ 450</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Monitor UltraWide 4K">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400" alt="Laptop">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Laptop Ultra Slim - Core i7 12va Gen</h3></a>
+                        <p class="ml-price">$ 980</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Laptop Ultra Slim">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=400" alt="Servidor">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Servidor Rack 2U - Dual Xeon Gold</h3></a>
+                        <p class="ml-price">$ 5.200</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Servidor Rack 2U">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400" alt="Monitor">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Monitor Gamer 144Hz - 27" IPS 1ms</h3></a>
+                        <p class="ml-price">$ 320</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Monitor Gamer 144Hz">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=400" alt="Teclado">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Teclado Mecánico Gamer RGB - Switch Blue</h3></a>
+                        <p class="ml-price">$ 85</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Teclado Mecánico Gamer">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400" alt="Webcam">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Cámara Web 4K Ultra HD - Micrófono Dual</h3></a>
+                        <p class="ml-price">$ 120</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Cámara Web 4K">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="ml-card">
+                    <a href="product-detail.html" class="ml-card-link">
+                        <div class="ml-card-img">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400" alt="Router">
+                        </div>
+                    </a>
+                    <div class="ml-card-content">
+                        <a href="product-detail.html"><h3>Router Mesh WiFi 6 - Pack de 3 Unidades</h3></a>
+                        <p class="ml-price">$ 290</p>
+                        <p class="ml-shipping">Envío gratis <i class="fas fa-bolt"></i></p>
+                        <button class="btn btn-primary buy-btn" data-product="Router Mesh WiFi 6">Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2026 TecnoServices, C.A. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="#" class="whatsapp-float" id="whatsapp-floating-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
