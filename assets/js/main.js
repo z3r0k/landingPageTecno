@@ -243,3 +243,48 @@ if (contactForm) {
         }
     });
 }
+
+// --- FAQ ACCORDION ---
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
+
+// --- STATS COUNTER ANIMATION ---
+const statsSection = document.querySelector('.stats-banner');
+const statNumbers = document.querySelectorAll('.stat-number');
+let started = false;
+
+if (statsSection && statNumbers.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !started) {
+            statNumbers.forEach(num => startCount(num));
+            started = true;
+        }
+    }); // Threshold optional here, default is 0
+    observer.observe(statsSection);
+}
+
+function startCount(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const originalText = el.innerText;
+    const prefix = originalText.match(/^\+/) ? "+" : "";
+    const suffix = originalText.match(/%$/) ? "%" : "";
+    let count = 0;
+    const duration = 2000; // 2 seconds
+    const interval = 20; 
+    const steps = duration / interval;
+    const increment = target / steps;
+
+    const timer = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+            el.innerText = prefix + target + suffix;
+            clearInterval(timer);
+        } else {
+            el.innerText = prefix + Math.ceil(count) + suffix;
+        }
+    }, interval);
+}
